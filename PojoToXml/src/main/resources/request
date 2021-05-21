@@ -1,0 +1,37 @@
+
+http://localhost:5667/hit
+//////////////////////////////////////////////////////////////////////
+{
+    "employee": [
+        {
+            "name": "rahul",
+            "age": 31,
+            "city": "delhi",
+            "salary": "6565",
+            "cars": {
+                "name": "honda",
+                "model": "huy8"
+            }
+        },
+        {
+            "name": "deepak",
+            "age": 31,
+            "city": "lucknow",
+            "salary": "89776",
+            "cars": {
+                "name": "corolla",
+                "model": "essar"
+            }
+        },
+        {
+            "name": "alex",
+            "age": 31,
+            "city": "dubai",
+            "salary": "89776",
+            "cars": {
+                "name": "martin",
+                "model": "zessa"
+            }
+        }
+    ]
+}

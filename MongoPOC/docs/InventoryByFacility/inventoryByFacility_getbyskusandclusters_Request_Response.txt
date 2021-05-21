@@ -1,0 +1,39 @@
+URI:
+http://localhost:8083/inventoryMongoApi/v1/inventoryByFacility/getbyskusandclusters
+
+Request Type: POST
+Content_type: application/json
+
+Request JSON:
+{
+	"skuList":["1122222"],
+	"cluster":["US-1"]
+}
+
+Response JSON:
+{
+    "inventoryList": [
+        {
+            "SKU": "1122222",
+            "Facility_name": "ATL",
+            "Status": "A",
+            "FACILITY_PROPERTIES": {
+                "Facility_ATS": 12,
+                "Allocated_Qty": 1,
+                "Damaged_Qty": 2,
+                "Watermark_Qty": 2,
+                "Facility_Type": "Warehouse",
+                "Country": "US",
+                "Cluster": "US-1",
+                "Network_Flag": "RF"
+            },
+            "SKU_Properties": {
+                "BOPIS": "Y",
+                "Vintage": "N",
+                "Branded": "N",
+                "LTL": "N",
+                "STH": "Y"
+            }
+        }
+    ]
+}

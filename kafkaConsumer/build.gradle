@@ -1,0 +1,49 @@
+plugins {
+	id 'org.springframework.boot' version '2.4.4'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+	maven {
+		credentials {
+			username "svc_mti"
+			password "1nt3rst1nG"
+		}
+		url 'https://nexus.bedbath.com/repository/bbb_software/'
+		metadataSources {
+			artifact()
+		}
+	}
+}
+
+ext {
+ 
+    lombokVersion = "1.18.8"
+    swaggerVersion="2.9.2"
+ 
+   }
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter'
+		compile 'org.springframework.boot:spring-boot-starter-web'
+		 	compile group:'com.bbby.eom', name:'EomSSCommonLibrary', version:'1.0.0-RELEASE'
+		
+	
+	implementation 'org.springframework.kafka:spring-kafka'
+	compileOnly "org.projectlombok:lombok:${lombokVersion}"
+	annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+	   	
+	
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.kafka:spring-kafka-test'
+}
+
+test {
+	useJUnitPlatform()
+}

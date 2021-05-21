@@ -1,0 +1,77 @@
+
+URI:
+localhost:8083/inventoryMongoApi/v1/inventoryByFacilities/getbyskusandfacilitiesandstatus
+
+Request Type: POST
+Content_type: application/json
+
+Request JSON:
+{
+"skuList" : ["1122225","1122223"],
+"facilityNameList" : ["ATL","LEW"],
+"statusList": ["A"]
+}
+
+Response JSON:
+{
+    "inventoryList": [
+        {
+            "SKU": "1122223",
+            "Network_ATS": 20,
+            "Cluster1_ATS": 2,
+            "Cluster2_ATS": 5,
+            "Cluster3_ATS": 5,
+            "Cluster4_ATS": 1,
+            "FACILITY_PROPERTIES": [
+                {
+                    "Facility_ATS": 12,
+                    "Allocated_Qty": 1,
+                    "Damaged_Qty": 2,
+                    "Watermark_Qty": 2,
+                    "Facility_Type": "Warehouse",
+                    "Country": "US",
+                    "Cluster": "US-3",
+                    "Network_Flag": "RF",
+                    "Facility_name": "LEW",
+                    "Status": "A"
+                }
+            ],
+            "SKU_Properties": {
+                "BOPIS": "N",
+                "Vintage": "N",
+                "Branded": "N",
+                "LTL": "N",
+                "STH": "Y"
+            }
+        },
+        {
+            "SKU": "1122225",
+            "Network_ATS": 20,
+            "Cluster1_ATS": 2,
+            "Cluster2_ATS": 5,
+            "Cluster3_ATS": 5,
+            "Cluster4_ATS": 1,
+            "FACILITY_PROPERTIES": [
+                {
+                    "Facility_ATS": 9,
+                    "Allocated_Qty": 1,
+                    "Damaged_Qty": 2,
+                    "Watermark_Qty": 2,
+                    "Facility_Type": "Warehouse",
+                    "Country": "US",
+                    "Cluster": "US-3",
+                    "Network_Flag": "RF",
+                    "Facility_name": "LEW",
+                    "Status": "A"
+                }
+            ],
+            "SKU_Properties": {
+                "BOPIS": "Y",
+                "Vintage": "N",
+                "Branded": "N",
+                "LTL": "N",
+                "STH": "Y"
+            }
+        }
+    ]
+}

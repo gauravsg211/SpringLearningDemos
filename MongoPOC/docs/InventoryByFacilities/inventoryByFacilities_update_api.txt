@@ -1,0 +1,37 @@
+URI:
+http://localhost:8083/inventoryMongoApi/v1/inventoryByFacilities/update/data
+Request Type: POST
+Content_type: application/json
+
+
+===================================
+UpdateInventoryBySkuAndStore
+===================================
+Request JSON:
+{
+	"itemName": "1122224",
+	"facilityName": "ATL", 
+	"AvailabletToSellQuantity": 81
+}
+Response JSON: void
+
+===================================
+updateInventoryBopisEligibleBySku
+===================================
+Request JSON:
+{
+	"itemName": "1122224",
+	"BopisEligible": "N"
+}
+Response JSON: void
+
+
+=======================================
+updateWaterMarkQuantityForFacilityName
+=======================================
+Request JSON:
+{
+    "facilityName": "ATL",
+	"WatermarkQuantity":13  
+}
+Response JSON: void
